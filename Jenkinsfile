@@ -1,5 +1,5 @@
 pipeline {
- agent { label 'win-core' }
+ agent { label 'мастер' }
   triggers {
     githubPush()
   }
