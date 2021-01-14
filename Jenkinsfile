@@ -12,6 +12,7 @@ pipeline {
 		
 		steps {
                        bat 'deploy.bat'
+
       }
     }
   }
