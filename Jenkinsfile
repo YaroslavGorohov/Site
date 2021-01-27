@@ -11,9 +11,9 @@ pipeline {
          stage('Windows') {
 		
 		steps {
-                        withCredentials([usernamePassword(credentialsID: '4testing',usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+                        withCredentials([usernamePassword(credentialsID: '4testing',usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 			bat 'deploy.bat'
-
+	}
       }
     }
   }
