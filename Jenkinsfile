@@ -14,10 +14,10 @@ pipeline {
 			withCredentials([
             		usernamePassword(credentialsId: '4testing', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
 					]){
-			powershell(''' 'get-psdrive
+			powershell(''' get-psdrive
 				   echo $WORKSPACE
 				   $bucketName = "new.avs4you.com"
-				   echo $bucketName ' ''') 
+				   echo $bucketName ''') 
                       							
 	}
       }
