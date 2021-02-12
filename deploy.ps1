@@ -1,1 +1,1 @@
-echo $bucket
+echo bucket
