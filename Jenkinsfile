@@ -14,9 +14,8 @@ pipeline {
 			withCredentials([
             		usernamePassword(credentialsId: '4testing', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
 					]){
-                       steps:
-			- powershell: .\deploy.ps1
-								
+			powershell(". '.deploy.ps1'") 
+                      							
 	}
       }
     }
