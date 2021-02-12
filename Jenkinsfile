@@ -14,9 +14,7 @@ pipeline {
 			withCredentials([
             		usernamePassword(credentialsId: '4testing', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
 					]){
-                       PowerShell '''
-		       get-psdrive
-		       '''
+                       PowerShell deploy.ps1
 	}
       }
     }
