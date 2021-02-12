@@ -14,7 +14,7 @@ pipeline {
 			withCredentials([
             		usernamePassword(credentialsId: '4testing', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
 					]){
-                       bat 'deploy.bat'
+                       bat echo %WORKSPACE%
 	}
       }
     }
