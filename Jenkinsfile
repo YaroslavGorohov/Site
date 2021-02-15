@@ -19,7 +19,7 @@ pipeline {
 			echo 1
 			get-psdrive
 				   echo 2
-				   echo  "$env:AccessKey"  123
+				   echo  '"$env:AccessKey"'
 				   echo  AccessKey
 				   echo  $env:SecretKey
 				   echo  SecretKey
