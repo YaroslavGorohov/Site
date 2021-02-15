@@ -16,7 +16,12 @@ pipeline {
 					]){
 			powershell(''' 
 			get-psdrive
+				   echo 1
 				   echo $WORKSPACE
+				   dir %WORKSPACE%
+				   echo $USERNAME
+				   echo 2
+				   echo %USERNMAE%
 				   $bucketName = "new.avs4you.com"
 				   echo $bucketName
 				   ''') 
