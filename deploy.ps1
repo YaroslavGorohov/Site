@@ -1,2 +1,3 @@
 get-psdrive
-echo $BRANCH_NAME
+echo  $env:SecretKey 
+echo  %SecretKey%
