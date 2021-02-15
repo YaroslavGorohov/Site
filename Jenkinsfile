@@ -14,6 +14,7 @@ pipeline {
 			withCredentials([
             		usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					]){
+				bat 'powershell -file deploy.ps1'
 			powershell(''' 
 			get-psdrive
 				   echo 1
@@ -22,9 +23,7 @@ pipeline {
 				   echo  $env:SecretKey
 				   echo  SecretKey
 				   echo $env:WORKSPACE
-				   dir $env:WORKSPASE
-				   '$env:WORKSPACE'\deploy.ps1
-				  
+				   dir $env:WORKSPASE				  
 				   echo 2
 				  
 				   $bucketName = "new.avs4you.com"
