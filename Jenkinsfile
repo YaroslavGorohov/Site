@@ -17,7 +17,9 @@ pipeline {
 			powershell(''' 
 			get-psdrive
 				   echo 1
-				   echo $WORKSPACE
+				   echo  $env:USERNAME
+				   echo $env:WORKSPACE
+				   dir $env:WORKSPASE
 				   dir %WORKSPACE%
 				   echo $USERNAME
 				   echo 2
