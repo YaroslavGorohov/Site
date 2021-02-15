@@ -12,7 +12,7 @@ pipeline {
 		
 		steps {
                         withCredentials([
-            		usernamePassword(credentialsId: '4testing', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
+            		usernamePassword(credentialsId: '4testing', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					]){
 			bat 'deploy.bat'
 	}
