@@ -19,13 +19,14 @@ pipeline {
 				   echo 1
 				   echo  $env:AccessKey
 				   echo  AccessKey
-echo  $env:SecretKey
+				   echo  $env:SecretKey
+				   echo  SecretKey
 				   echo $env:WORKSPACE
 				   dir $env:WORKSPASE
-				   dir %WORKSPACE%
-				   echo $USERNAME
+				   ./deploy.ps1
+				  
 				   echo 2
-				   echo %USERNMAE%
+				  
 				   $bucketName = "new.avs4you.com"
 				   echo $bucketName
 				   ''') 
