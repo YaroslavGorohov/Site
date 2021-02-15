@@ -12,12 +12,14 @@ pipeline {
 		
 		steps {
 			withCredentials([
-            		usernamePassword(credentialsId: '4testing', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
+            		usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					]){
 			powershell(''' 
 			get-psdrive
 				   echo 1
-				   echo  $env:USERNAME
+				   echo  $env:AccessKey
+				   echo  AccessKey
+echo  $env:SecretKey
 				   echo $env:WORKSPACE
 				   dir $env:WORKSPASE
 				   dir %WORKSPACE%
