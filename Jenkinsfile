@@ -23,7 +23,7 @@ pipeline {
 				   echo  SecretKey
 				   echo $env:WORKSPACE
 				   dir $env:WORKSPASE
-				   deploy.ps1
+				   "$env:WORKSPACE"\deploy.ps1
 				  
 				   echo 2
 				  
