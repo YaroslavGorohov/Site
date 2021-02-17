@@ -22,7 +22,6 @@ pipeline {
 				   echo  '"$env:AccessKey"'
 				   echo  AccessKey
 				   echo  $env:SecretKey
-				   echo  SecretKey
 				   echo $env:WORKSPACE
 				   dir $env:WORKSPASE				  
 				   echo 3
