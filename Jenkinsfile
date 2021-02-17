@@ -5,7 +5,7 @@ pipeline {
   }
     options {
     disableConcurrentBuilds()
-    buildDiscarder (logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+    buildDiscarder (logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
      }
   stages {
          stage('Windows') {
