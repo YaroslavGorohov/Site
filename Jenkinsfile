@@ -1,5 +1,5 @@
 pipeline {
- agent { label 'master' }
+ 
   triggers {
     githubPush()
   }
@@ -9,6 +9,7 @@ pipeline {
      }
   stages {
          stage('Windows') {
+		agent { label 'master' }
 		
 		steps {
 			withCredentials([
@@ -29,6 +30,16 @@ pipeline {
 				   $bucketName = "new.avs4you.com"
 				   echo $bucketName
 				   ''') 
+                      							
+	}
+	stage('UBUNTU') {
+		agent { label 'ubuntu' }
+		
+		steps {
+			withCredentials([
+            		usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
+					]){
+			shell 'echo shell'
                       							
 	}
       }
