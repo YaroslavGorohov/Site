@@ -23,7 +23,6 @@ pipeline {
 		
 		
 		stage('Windows1') {
-			agent { label 'master' }
 			steps {
 			withCredentials([
             		usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
