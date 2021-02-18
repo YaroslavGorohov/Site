@@ -43,9 +43,9 @@ pipeline {
 				   $bucketName = "new.avs4you.com"
 				   echo $bucketName
 				   ''') 
-			}      							
-	}
-		
+			} 
+		}
+	}	
 				stage('Windows') {
 					agent { label 'master' }
 					stages {
