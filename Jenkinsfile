@@ -13,7 +13,7 @@ pipeline {
 			                                                                                        powershell(''' 
 			                                                                                      
                                                                                                   			  $bucketName = "new.avs4you.com"
-															  git branch
+															 echo `git branch`
                                                                                                   			  echo $bucketName
 				                                                                                      ''')}
 						        	                                            }
