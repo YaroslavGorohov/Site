@@ -39,6 +39,7 @@ pipeline {
 					]){
 				echo end
 				sh "printenv"
+			}
                       							
 	}
       }
