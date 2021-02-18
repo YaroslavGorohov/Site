@@ -9,7 +9,6 @@ pipeline {
 						stage('Components') {
 							steps {
 								sh 'echo 123'
-                                echo first step
 							}
 						}
 					}
@@ -19,12 +18,12 @@ pipeline {
 					stages {
 						stage('Components') {
 							steps {
-								bat 'echo123'
+								bat 'echo 123'
 							}
 						}
 						stage('Common') {
 							steps {
-								echo 123
+								bat 'echo 133'
 							}
 						}		
 					}
