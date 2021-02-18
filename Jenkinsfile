@@ -22,9 +22,11 @@ pipeline {
 		}
 		
 		
-		stage('Windows1') {
-			steps {
-			withCredentials([
+			
+				stage('Windows') {
+					agent { label 'master' }
+					stages {
+						withCredentials([
             		usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					]){
 				bat 'powershell -file deploy.ps1'
@@ -42,13 +44,6 @@ pipeline {
 				   $bucketName = "new.avs4you.com"
 				   echo $bucketName
 				   ''') 
-			} 
-		}
-	}	
-				stage('Windows') {
-					agent { label 'master' }
-					stages {
-						
 						stage('Client') {
 							steps {
 								bat 'powershell -file deploy.ps1'
