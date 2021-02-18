@@ -13,7 +13,7 @@ pipeline {
 						}
 						stage('People') {
 							steps {
-								sh 'echo Components'
+								echo hostname
 							}
 						}
 					}
@@ -26,12 +26,12 @@ pipeline {
 						
 						stage('Client') {
 							steps {
-								bat 'echo win'
+								bat 'powershell -file deploy.ps1'
 							}
 						}
 						stage('People') {
 							steps {
-								bat 'echo win2'
+								echo people
 							}
 						}
 					}
