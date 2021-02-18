@@ -1,34 +1,22 @@
 pipeline {
-	agent none
-	stages {
-		stage('Build') {
-			parallel {
-				stage('Unix') {
-					agent { label 'ubuntu' }
-					stages {
-						stage('Components') {
-							steps {
-								sh 'echo 123'
-							}
-						}
-					}
-				}
-				stage('windows') {
-					agent { label 'master' }
-					stages {
-						stage('Components') {
-							steps {
-								bat 'echo 123'
-							}
-						}
-						stage('Common') {
-							steps {
-								bat 'echo 133'
-							}
-						}		
-					}
-				}
-			}
-		}
-	}
-}
+  triggers {
+    githubPush()
+  }
+  agent {
+    label 'ubuntu'
+  }
+  options {
+    disableConcurrentBuilds()
+    buildDiscarder (logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+  }
+  stages {
+    stage("First step") {
+      steps {
+        sh 'hostname'
+        sh 'pwd'
+        sh 'uname -a'
+        sh 'echo "123456"'
+      }
+    }
+  }
+} 
