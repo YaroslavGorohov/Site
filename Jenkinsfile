@@ -13,7 +13,7 @@ pipeline {
 			                                                                                        powershell(''' 
 			                                                                                      
                                                                                                   			  $bucketName = "new.avs4you.com"
-															  git rev-parse --abbrev-ref HEAD
+															  git branch
                                                                                                   			  echo $bucketName
 				                                                                                      ''')}
 						        	                                            }
