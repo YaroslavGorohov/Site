@@ -11,17 +11,10 @@ pipeline {
 					                                                                            ]){
 				                                                                                    bat 'powershell -file deploy.ps1'
 			                                                                                        powershell(''' 
-			                                                                                        echo 1
-			                                                                                        get-psdrive
-				                                                                                    echo 2
-                                                                                                    echo  '"$env:AccessKey"'
-                                                                                                    echo  AccessKey
-                                                                                                    echo  $env:SecretKey
-                                                                                                    echo $env:WORKSPACE
-                                                                                                    dir $env:WORKSPASE				  
-                                                                                                    echo 3
-                                                                                                    $bucketName = "new.avs4you.com"
-                                                                                                    echo $bucketName
+			                                                                                      
+                                                                                                  			  $bucketName = "new.avs4you.com"
+															  git rev-parse --abbrev-ref HEAD
+                                                                                                  			  echo $bucketName
 				                                                                                      ''')}
 						        	                                            }
 						                                             }
