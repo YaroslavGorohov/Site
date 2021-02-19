@@ -3,11 +3,14 @@ echo  $env:SecretKey
 echo CVS_BRANCH
 echo $ENV:CVS_BRANCH
 echo 1
-echo "${env.GIT_BRANCH}"
+echo "${scmVars.GIT_COMMIT}"
 echo 2
-echo $GIT_BRANCH
+echo ${scmVars.GIT_COMMIT}
 echo 3
-sh "printenv"
+final scmVars = checkout(scm)			scmInfo = checkout scm
+echo "scmVars: ${scmVars}"		        echo "scm : ${scmInfo}"
+echo "scmVars.GIT_COMMIT: ${scmVars.GIT_COMMIT}"			echo "${scmInfo.GIT_COMMIT}"
+echo "scmVars.GIT_BRANCH: ${scmVars.GIT_BRANCH}"
 echo 4
 echo "printenv"
 echo 5
