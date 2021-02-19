@@ -13,5 +13,7 @@ echo "printenv"
 echo 5
 echo $env:BRANCH_NAME
 echo 6
+echo "\$env:BRANCH_NAME"
+echo 7
 #Set-AWSCredentials -AccessKey $Env:AccessKey -SecretKey $Env:SecretKey
 echo  %SecretKey%
