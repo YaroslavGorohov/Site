@@ -9,6 +9,7 @@ pipeline {
 							                                                	withCredentials([
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
+														powershell "\$env:BRANCH_NAME"
 				                                                                                    bat 'powershell -file deploy.ps1'
 			                                                                                        powershell(''' 
 			                                                                                      
