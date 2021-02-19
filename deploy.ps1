@@ -3,7 +3,7 @@ echo  $env:SecretKey
 echo CVS_BRANCH
 echo $ENV:CVS_BRANCH
 echo 1
-echo $env:GIT_BRANCH
+echo "${env.GIT_BRANCH}"
 echo 2
 echo $GIT_BRANCH
 echo 3
