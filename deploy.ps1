@@ -15,5 +15,7 @@ echo $env:BRANCH_NAME
 echo 6
 echo "\$env:BRANCH_NAME"
 echo 7
+"\$env:BRANCH_NAME"
+echo 8
 #Set-AWSCredentials -AccessKey $Env:AccessKey -SecretKey $Env:SecretKey
 echo  %SecretKey%
