@@ -17,7 +17,7 @@ pipeline {
                 ],
     submoduleCfg: [],
     userRemoteConfigs: [[credentialsId: 'someID',
-    url: 'git@link.git']]])
+    url: 'https://github.com/YaroslavGorohov/Site.git']]])
 															powershell '"$env:BRANCH_NAME"'
 															powershell 'echo 12'
 			                                                                                        powershell(''' 
