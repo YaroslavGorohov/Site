@@ -9,7 +9,7 @@ pipeline {
 							                                                	withCredentials([
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
-															git merge --abort    
+															   
 															checkout([$class: 'GitSCM', 
     branches: [[name: '*/main']],
     doGenerateSubmoduleConfigurations: false,
