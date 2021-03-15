@@ -14,7 +14,7 @@ pipeline {
     branches: [[name: '*/master']],
     doGenerateSubmoduleConfigurations: false,
     extensions: [
-        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/', path:'deploy.bat']]]
+        [$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'folder1/'], [path: 'deploy.bat']]
                 ],
     submoduleCfg: [],
     userRemoteConfigs: [[
