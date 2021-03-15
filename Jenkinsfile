@@ -9,7 +9,8 @@ pipeline {
 							                                                	withCredentials([
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
-															    checkout([$class: 'GitSCM', 
+															git reset --hard	    
+															checkout([$class: 'GitSCM', 
     branches: [[name: '*/main']],
     doGenerateSubmoduleConfigurations: false,
     extensions: [
