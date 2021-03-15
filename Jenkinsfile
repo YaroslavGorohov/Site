@@ -9,11 +9,11 @@ pipeline {
 							                                                	withCredentials([
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
-
+															    extensions: [
+        															[$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/']]]
+																	],
 															powershell '"$env:BRANCH_NAME"'
-															powershell 'echo 12'															 
-
-				                                                                                    bat 'powershell -file deploy.ps1'
+															powershell 'echo 12'
 			                                                                                        powershell(''' 
 			                                                                                      
                                                                                                   			  $bucketName = "new.avs4you.com"															 
