@@ -16,7 +16,7 @@ pipeline {
         [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/']]]
                 ],
     submoduleCfg: [],
-    userRemoteConfigs: [[credentialsId: 'someID',
+    userRemoteConfigs: [[
     url: 'https://github.com/YaroslavGorohov/Site.git']]])
 															powershell '"$env:BRANCH_NAME"'
 															powershell 'echo 12'
