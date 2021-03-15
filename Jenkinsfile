@@ -13,7 +13,7 @@ pipeline {
     branches: [[name: '*/main']],
     doGenerateSubmoduleConfigurations: false,
     extensions: [
-        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/,job.gif']]]
+        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/',path:'job.gif']]]
                 ],
     submoduleCfg: [],
     userRemoteConfigs: [[
