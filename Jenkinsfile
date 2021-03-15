@@ -9,9 +9,15 @@ pipeline {
 							                                                	withCredentials([
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
-															    extensions: [
-        															[$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/']]]
-																	],
+															    checkout([$class: 'GitSCM', 
+    branches: [[name: '*/main']],
+    doGenerateSubmoduleConfigurations: false,
+    extensions: [
+        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/']]]
+                ],
+    submoduleCfg: [],
+    userRemoteConfigs: [[credentialsId: 'someID',
+    url: 'git@link.git']]])
 															powershell '"$env:BRANCH_NAME"'
 															powershell 'echo 12'
 			                                                                                        powershell(''' 
