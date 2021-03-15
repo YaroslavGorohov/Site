@@ -9,9 +9,7 @@ pipeline {
 							                                                	withCredentials([
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
-															git reset --hard	    
-															checkout([$class: 'GitSCM', 
-    branches: [[name: '*/main']],
+															
     doGenerateSubmoduleConfigurations: false,
     extensions: [
         [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/']]]
