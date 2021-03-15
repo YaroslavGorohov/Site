@@ -11,7 +11,7 @@ pipeline {
 					                                                                            ]){
 
 															powershell '"$env:BRANCH_NAME"'
-															powershell 'echo 12'															 
+															powershell 'echo 123'															 
 
 				                                                                                    bat 'powershell -file deploy.ps1'
 			                                                                                        powershell(''' 
