@@ -11,7 +11,7 @@ pipeline {
 					                                                                            ]){
 															   
 															checkout([$class: 'GitSCM', 
-    branches: [[name: '*/main']],
+    branches: [[name: '*/master']],
     doGenerateSubmoduleConfigurations: false,
     extensions: [
         [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'folder1/']]]
