@@ -13,7 +13,7 @@ pipeline {
 						}
 						stage('Common') {
 							steps {
-								sh 'sh sh echo 456'
+								sh 'sh hostname'
 							}
 						}
 						
@@ -22,3 +22,4 @@ pipeline {
 					}
 				}
 	}
+}
