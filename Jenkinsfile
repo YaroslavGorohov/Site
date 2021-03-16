@@ -12,10 +12,7 @@ pipeline {
   stages {
     stage("First step") {
       steps {
-        sh 'hostname'
-        sh 'pwd'
         sh 'uname -a'
-        sh 'echo "123456"'
       }
     }
   }
