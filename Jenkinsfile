@@ -24,7 +24,7 @@ pipeline {
         submoduleCfg: [],
         userRemoteConfigs: [[
         url: 'https://github.com/YaroslavGorohov/Site.git']]])
-        sh 'hostname'
+        sh 'aws s3api list-objects --bucket test-scripts-update  --profile sh_update'
         sh 'pwd'
         sh 'uname -a'
         sh 'echo "123"'
