@@ -16,7 +16,7 @@ pipeline {
         usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					              ]){													
 				checkout([$class: 'GitSCM', 
-        branches: [[name: '*/master']],
+        branches: [[name: '*/unix']],
         doGenerateSubmoduleConfigurations: false,
         extensions: [
         [$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'folder1/'], [path: 'deploy.bat']]]
