@@ -25,7 +25,7 @@ pipeline {
         userRemoteConfigs: [[
         url: 'https://github.com/YaroslavGorohov/Site.git']]])
         sh 'aws s3api list-objects --bucket test-scripts-update  --profile sh_update'
-        sh 'pwd'
+        sh 'ls -l'
         sh 'uname -a'
         sh 'echo "123"'
       }
