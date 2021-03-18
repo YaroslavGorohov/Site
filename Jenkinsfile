@@ -29,6 +29,8 @@ pipeline {
         sh 'uname -a'
 	sh 'cd ./build/install/docker/'
 	sh 'ls -la'
+	sh 'ls -la'
+		
       }
     }
   }
