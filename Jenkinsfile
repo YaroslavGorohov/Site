@@ -28,8 +28,8 @@ pipeline {
         sh 'ls -l'
         sh 'uname -a'
         sh 'git clone https://github.com/ONLYOFFICE/portals.git'
-	cd ./build/install/docker/
-	ls -l
+	sh 'cd ./build/install/docker/'
+	sh 'ls -la'
       }
     }
   }
