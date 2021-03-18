@@ -27,7 +27,9 @@ pipeline {
         sh 'aws s3api list-objects --bucket test-scripts-update  --profile sh_update'
         sh 'ls -l'
         sh 'uname -a'
-        sh 'echo "123"'
+        sh 'git clone https://github.com/ONLYOFFICE/portals.git'
+	cd ./build/install/docker/
+	ls -l
       }
     }
   }
