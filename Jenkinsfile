@@ -27,8 +27,7 @@ pipeline {
         sh 'aws s3api list-objects --bucket test-scripts-update  --profile sh_update'
         sh 'ls'
         sh 'uname -a'
-	sh 'ls -la'
-	sh 'ls '	
+	sh 'ls -la'	
       }
     }
   }
