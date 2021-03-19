@@ -28,7 +28,7 @@ pipeline {
         sh 'ls'
         sh 'uname -a'
 	sh 'ls -la'
-		
+	sh 'ls '	
       }
     }
   }
