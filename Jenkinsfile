@@ -10,7 +10,7 @@ pipeline {
             		                                                                            usernamePassword(credentialsId: 'aws-s3-teststatic', usernameVariable: 'AccessKey', passwordVariable: 'SecretKey')
 					                                                                            ]){
 															powershell '"$env:BRANCH_NAME"'
-															powershell 'echo 123'															 
+															powershell 'echo 12'															 
 
 			                                                                                        powershell(''' 
 			                                                                                      
