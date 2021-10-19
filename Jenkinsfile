@@ -30,9 +30,7 @@ pipeline {
 						                                             }
 						                         stage('Common') {
 							                                         steps {
-								                                             bat 'echo 133'
-													 bat 'echo 134'
-													 bat 'echo 135'
+
 													 bat 'echo 136'
 							                                               }
 						                                           }		
